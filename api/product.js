@@ -10,7 +10,7 @@ app.set('views', path.join(__dirname, 'views'));
  */
 router.get("/", async (req, res) => {
   try {
-    res.render('index.ejs');
+    res.sendFile('index.ejs');
   } catch (error) {
     console.error(error);
     return res.status(500).send("Server error");
