@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
+app.set('view engine', 'ejs')
 /**
  * GET product list.
  *
@@ -8,7 +9,7 @@ const router = express.Router();
  */
 router.get("/", async (req, res) => {
   try {
-    res.render('index.html');
+    res.render('index.ejs');
   } catch (error) {
     console.error(error);
     return res.status(500).send("Server error");
